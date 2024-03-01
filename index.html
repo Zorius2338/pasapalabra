@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pasapalabra</title>
+        <script src="preguntas.js"></script>
+        <script src="Rosco.js"></script>
+        <script src="index.js"></script>
+        <link rel="stylesheet" href="http://use.fontawesome.com/releases/v6.5.0/css/all.css">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <div id="next-group-modal" class="hidden">
+            <div class="modal-window">
+                <div id="modal-title">El siguiente grupo es el Grupo A</div>
+                <div id="modal-btn" class="boton acierto">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+            </div>
+        </div>
+        <div id="rosco">
+            <div id="nombre-grupo"></div>
+            <div id="aciertos">0</div>
+            <div id="segundos">20</div>
+        </div>
+        <div id="pregunta">
+            CON LA A: Mecanismo para esparcir un líquido a presión, como el agua para el riego
+        </div>
+        <div id="respuesta-box">
+            <div id="btn-ok" class="boton acierto">
+                <i class="fa fa-check"></i> 
+            </div>
+            <div id="btn-pasa" class="boton pasa">
+                <i class="fa-solid fa-forward"></i>
+            </div>  
+            <div id="btn-error" class="boton fallo">
+                <i class="fa fa-x"></i>
+            </div>  
+            
+        </div>
+    </body>
+</html>
