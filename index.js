@@ -2,7 +2,19 @@ function mostrarPantallaSiguienteGrupo() {
     paused = true;
     document.getElementById("next-group-modal").classList.remove("hidden");
     document.getElementById("modal-title").innerText = "El siguiente grupo es el " + roscos[current_rosco_i].nombregrupo;
+    let tiempo = 3;
+    document.getElementById("modal-btn").innerText = tiempo;
+    let interval = setInterval(()=> {
+        tiempo--;
+        document.getElementById("modal-btn").innerText = tiempo;
+        console.log(tiempo);
+        if(tiempo === 0){
+            esconderPantallaSiguienteGrupo();
+            clearInterval(interval);
+        }
+    }, 1000);
 }
+
 
 async function cambioRosco() {
     roscos[current_rosco_i].limpiarContador();
@@ -24,11 +36,13 @@ async function cambioRosco() {
     roscos[current_rosco_i].reloadRosco(document, cambioRosco);
 }
 
+function esconderPantallaSiguienteGrupo(){
+    paused = false;
+    document.getElementById("next-group-modal").classList.add("hidden");
+}
 function loadEventListeners() {
-    document.getElementById("modal-btn").addEventListener("click", (e) => {
-        paused = false;
-        document.getElementById("next-group-modal").classList.add("hidden");
-    });
+
+    //document.getElementById("modal-btn").addEventListener("click",);
 
     document.getElementById("btn-ok").addEventListener("click", (e) => {
         let currentRosco = roscos[current_rosco_i];
@@ -62,13 +76,20 @@ function jugar() {
     gana = null;
 
     roscos = [
-        new Rosco("Grupo A", PREGUNTAS),
-        new Rosco("Grupo B", PREGUNTAS),
-        new Rosco("Grupo C", PREGUNTAS)
+        new Rosco("AZUL", PREGUNTAS1),
+        new Rosco("VERDE", PREGUNTAS1),
+        new Rosco("AMARILLO", PREGUNTAS1)
     ];
     current_rosco_i = 0;
 
     roscos[current_rosco_i].reloadRosco(document, cambioRosco);
+    let tiempo = new Tiempo(15,0);
+    let interval = setInterval(()=> {
+        tiempo.restartiempo();
+        tiempo.minutos;
+        tiempo.segundos;
+        document.getElementById("tiempo-global").innerText = tiempo.minutos + ":" + tiempo.segundos;
+    }, 1000);
 }
 
 const LETRAS = "abcdefghijklmnñopqrstuvwxyz".toLowerCase();
@@ -81,6 +102,8 @@ let paused = false;
 
 window.onload = () => {
     loadEventListeners();
+
+    configuracion();
 
     jugar();
 };

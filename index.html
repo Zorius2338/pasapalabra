@@ -1,41 +1,105 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Pasapalabra</title>
-        <script src="preguntas.js"></script>
-        <script src="Rosco.js"></script>
-        <script src="index.js"></script>
-        <link rel="stylesheet" href="http://use.fontawesome.com/releases/v6.5.0/css/all.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div id="next-group-modal" class="hidden">
-            <div class="modal-window">
-                <div id="modal-title">El siguiente grupo es el Grupo A</div>
-                <div id="modal-btn" class="boton acierto">
-                    <i class="fa-solid fa-play"></i>
+
+<head>
+    <title>Pasapalabra</title>
+    <script src="preguntas/preguntas2.js"></script>
+
+    <script src="Rosco.js"></script>
+    <script src="Tiempo.js"></script>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="http://use.fontawesome.com/releases/v6.5.0/css/all.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div id="tiempo-global">15:00</div>
+
+    <div id="next-group-modal" class="modal hidden">
+        <div class="modal-window">
+            <div id="modal-title">El siguiente grupo es el Grupo A</div>
+            <div id="modal-btn" class="boton acierto">
+                <i class="fa-solid fa-play"></i>
+            </div>
+        </div>
+    </div>
+
+    <div id="config-mode-modal" class="hidden modal">
+        <div class="modal-window">
+            <div id="config-modal-title">Elije la modalidad</div>
+            <div class="h-align">
+                <div id="config-modal-btn" class="boton acierto">
+                    Niños
+                </div>
+                <div id="config-modal-btn" class="boton acierto">
+                    Adultos
                 </div>
             </div>
         </div>
-        <div id="rosco">
-            <div id="nombre-grupo"></div>
-            <div id="aciertos">0</div>
-            <div id="segundos">20</div>
-        </div>
-        <div id="pregunta">
-            CON LA A: Mecanismo para esparcir un líquido a presión, como el agua para el riego
-        </div>
-        <div id="respuesta-box">
-            <div id="btn-ok" class="boton acierto">
-                <i class="fa fa-check"></i> 
+    </div>
+
+    <div id="groups-mode-modal" class="modal">
+        <div class="modal-window">
+            <div id="groups-modal-title">Selecciona los grupos</div>
+            <div class="v-align">
+                <div class="h-align">
+                    <div id="group-1-btn" class="boton amarillo">
+                        Groc
+                    </div>
+                    <div id="group-2-btn" class="boton magenta">
+                        Magenta
+                    </div>
+                    <div id="group-3-btn" class="boton cian">
+                        Cian
+                    </div>
+                </div>
+                <div class="h-align">
+                    <div id="group-4-btn" class="boton vermell">
+                        Rojo
+                    </div>
+                    <div id="group-5-btn" class="boton verd">
+                        Verde
+                    </div>
+                    <div id="group-6-btn" class="boton blau">
+                        Azul
+                    </div>
+                </div>
+                <div class="h-align">
+                    <div id="group-7-btn" class="boton blanco">
+                        Blanco
+                    </div>
+                    <div id="group-8-btn" class="boton gris">
+                        Gris
+                    </div>
+                    <div id="group-9-btn" class="boton naranja">
+                        Naranja
+                    </div>
+                </div>
             </div>
-            <div id="btn-pasa" class="boton pasa">
-                <i class="fa-solid fa-forward"></i>
-            </div>  
-            <div id="btn-error" class="boton fallo">
-                <i class="fa fa-x"></i>
-            </div>  
-            
         </div>
-    </body>
+    </div>
+
+
+    <div id="rosco">
+        <div id="nombre-grupo"></div>
+        <div id="aciertos">0</div>
+        <div id="segundos">20</div>
+    </div>
+    <div id="pregunta">
+        CON LA A: Mecanismo para esparcir un líquido a presión, como el agua para el riego
+    </div>
+    <div id="respuesta-box">
+        <div id="btn-ok" class="boton acierto">
+            <i class="fa fa-check"></i>
+        </div>
+        <div id="btn-pasa" class="boton pasa">
+            <i class="fa-solid fa-forward"></i>
+        </div>
+        <div id="btn-error" class="boton fallo">
+            <i class="fa fa-x"></i>
+        </div>
+
+    </div>
+</body>
+
 </html>
