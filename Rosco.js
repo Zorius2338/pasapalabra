@@ -1,6 +1,6 @@
 class Rosco {
 
-    static LETRAS = "abcdefghijklmnñopqrstuvwxyz".toLowerCase();
+    static LETRAS = "abcdefghijlmnñopqrstuvxyz".toLowerCase();
     static CORRECTO = "2"
     static PASAR = "1"
     static ERROR = "0"
@@ -93,7 +93,7 @@ class Rosco {
     siguienteLetraEscondida() {
         document.getElementById("esfera-" + this.letra).classList.remove("current");
         this.i_letra++;
-        this.i_letra = this.i_letra % LETRAS.length;
+        this.i_letra = this.i_letra % Rosco.LETRAS.length;
         this.letra = Rosco.LETRAS[this.i_letra];
         document.getElementById("esfera-" + this.letra).classList.add("current");
     }
@@ -101,7 +101,7 @@ class Rosco {
     siguienteLetra(document) {
         document.getElementById("esfera-" + this.letra).classList.remove("current");
         this.i_letra++;
-        this.i_letra = this.i_letra % LETRAS.length;
+        this.i_letra = this.i_letra % Rosco.LETRAS.length;
         this.letra = Rosco.LETRAS[this.i_letra];
         let letra_u = this.letra.toUpperCase();
 

@@ -137,8 +137,6 @@ function configuracion() {
 }
 
 
-const LETRAS = "abcdefghijklmnñopqrstuvwxyz".toLowerCase();
-
 // Pensar que pasa si un grupo gana
 let gana = null;
 let current_rosco_i;
