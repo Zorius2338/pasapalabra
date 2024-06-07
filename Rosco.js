@@ -25,6 +25,7 @@ class Rosco {
         let nombregrupo = document.createElement("div");
         nombregrupo.setAttribute("id", "nombre-grupo");
         nombregrupo.innerText = this.nombregrupo;
+        nombregrupo.classList.add(this.nombregrupo.toLowerCase());
 
 
         let aciertos = document.createElement("div");
@@ -75,7 +76,8 @@ class Rosco {
 
         }
         document.getElementById("esfera-" + this.letra).classList.add("current");
-        document.getElementById("pregunta").innerText = "Con la " + this.letra.toUpperCase() + ": " + this.preguntas[this.letra];
+        let letra_u = this.letra.toUpperCase();
+        document.getElementById("pregunta").innerText = this.preguntas[letra_u][0] + letra_u + ": " + this.preguntas[letra_u][1];
 
         this.empezarContador(document, siguienteRoscoFnc);
     }
@@ -88,13 +90,23 @@ class Rosco {
         this.estadoletra[this.i_letra] = Rosco.CORRECTO;
     }
 
-    siguienteLetra(document) {
+    siguienteLetraEscondida() {
         document.getElementById("esfera-" + this.letra).classList.remove("current");
         this.i_letra++;
         this.i_letra = this.i_letra % LETRAS.length;
         this.letra = Rosco.LETRAS[this.i_letra];
         document.getElementById("esfera-" + this.letra).classList.add("current");
-        document.getElementById("pregunta").innerText = "Con la " + this.letra.toUpperCase() + ": " + this.preguntas[this.letra];
+    }
+
+    siguienteLetra(document) {
+        document.getElementById("esfera-" + this.letra).classList.remove("current");
+        this.i_letra++;
+        this.i_letra = this.i_letra % LETRAS.length;
+        this.letra = Rosco.LETRAS[this.i_letra];
+        let letra_u = this.letra.toUpperCase();
+
+        document.getElementById("esfera-" + this.letra).classList.add("current");
+        document.getElementById("pregunta").innerText = this.preguntas[letra_u][0] + letra_u + ": " + this.preguntas[letra_u][1];
     }
 
     errorLetra(document) {

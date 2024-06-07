@@ -56,7 +56,7 @@ function loadEventListeners() {
         let currentRosco = roscos[current_rosco_i];
         
         currentRosco.errorLetra(document);
-        currentRosco.siguienteLetra(document);
+        currentRosco.siguienteLetraEscondida(document);
         currentRosco.resetTiempo(document);
 
         cambioRosco();
@@ -65,7 +65,7 @@ function loadEventListeners() {
     document.getElementById("btn-pasa").addEventListener("click", (e) => {
         let currentRosco = roscos[current_rosco_i];
 
-        currentRosco.siguienteLetra(document);
+        currentRosco.siguienteLetraEscondida(document);
         currentRosco.resetTiempo(document);
 
         cambioRosco();
@@ -74,12 +74,15 @@ function loadEventListeners() {
 
 function jugar() {
     gana = null;
+    roscos = [];
+    
+    for(let grupo of groups) {
+        console.log(grupo);
+        roscos.push(
+            new Rosco(grupo.toUpperCase(), PREGUNTAS1)
+        )
+    }
 
-    roscos = [
-        new Rosco("AZUL", PREGUNTAS1),
-        new Rosco("VERDE", PREGUNTAS1),
-        new Rosco("AMARILLO", PREGUNTAS1)
-    ];
     current_rosco_i = 0;
 
     roscos[current_rosco_i].reloadRosco(document, cambioRosco);
@@ -92,6 +95,48 @@ function jugar() {
     }, 1000);
 }
 
+function groupWindow() {
+    document.getElementById("config-mode-modal").classList.add("hidden");
+    document.getElementById("config-groups-modal").classList.remove("hidden");
+}
+
+function configuracion() {
+    document.getElementById("config-modal-btn-kids").addEventListener("click", () => {
+        mode = "kids";
+        groupWindow();
+    });
+    
+    document.getElementById("config-modal-btn-adults").addEventListener("click", () => {
+        mode = "adults";
+        groupWindow();
+    });
+
+    for(let v of "123456789") {
+        let btn = document.getElementById(`group-${v}-btn`);
+        
+        btn.addEventListener("click", () => {
+            if(btn.classList.contains("selected")) {
+                btn.classList.remove("selected");
+            } else {
+                btn.classList.add("selected");
+            }
+        });
+    }
+    
+    document.getElementById(`group-accept-btn`).addEventListener("click", () => {
+        for(let v of "123456789") {
+            let btn = document.getElementById(`group-${v}-btn`);
+            if(btn.classList.contains("selected")) groups.push(btn.innerText);
+        }
+
+        document.getElementById("config-groups-modal").classList.add("hidden");
+        
+        jugar();
+    })
+
+}
+
+
 const LETRAS = "abcdefghijklmnñopqrstuvwxyz".toLowerCase();
 
 // Pensar que pasa si un grupo gana
@@ -100,10 +145,11 @@ let current_rosco_i;
 let roscos = [];
 let paused = false;
 
+let mode = null;
+let groups = [];
+
 window.onload = () => {
-    loadEventListeners();
-
     configuracion();
-
-    jugar();
+    
+    loadEventListeners();
 };

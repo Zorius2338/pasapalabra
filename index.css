@@ -38,15 +38,15 @@ body {
     background-color: #00FFFF !important;
 }
 
-.vermell {
+.rojo {
     background-color: #FF0000 !important;
 }
 
-.verd {
+.verde {
     background-color: #00FF00 !important;
 }
 
-.blau {
+.azul {
     background-color: #0000FF !important;
 }
 
@@ -74,7 +74,7 @@ body {
     left: 3rem;
 
     font-size: 3em;
-    color: #AAAACC;
+    color: #333333;
 
     background-color: #3366aa;
     border-radius: 1.5rem;
@@ -287,4 +287,8 @@ body {
 
 .hidden {
     visibility: hidden !important;
+}
+
+.selected {
+    border: .3rem solid #DEDEDE;
 }

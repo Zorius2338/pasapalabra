@@ -3,7 +3,7 @@
 
 <head>
     <title>Pasapalabra</title>
-    <script src="preguntas/preguntas2.js"></script>
+    <script src="preguntas/preguntas1.js"></script>
 
     <script src="Rosco.js"></script>
     <script src="Tiempo.js"></script>
@@ -24,27 +24,27 @@
         </div>
     </div>
 
-    <div id="config-mode-modal" class="hidden modal">
+    <div id="config-mode-modal" class="modal">
         <div class="modal-window">
             <div id="config-modal-title">Elije la modalidad</div>
             <div class="h-align">
-                <div id="config-modal-btn" class="boton acierto">
+                <div id="config-modal-btn-kids" class="boton acierto">
                     Niños
                 </div>
-                <div id="config-modal-btn" class="boton acierto">
+                <div id="config-modal-btn-adults" class="boton acierto">
                     Adultos
                 </div>
             </div>
         </div>
     </div>
 
-    <div id="groups-mode-modal" class="modal">
+    <div id="config-groups-modal" class="modal hidden">
         <div class="modal-window">
             <div id="groups-modal-title">Selecciona los grupos</div>
             <div class="v-align">
                 <div class="h-align">
                     <div id="group-1-btn" class="boton amarillo">
-                        Groc
+                        Amarillo
                     </div>
                     <div id="group-2-btn" class="boton magenta">
                         Magenta
@@ -54,13 +54,13 @@
                     </div>
                 </div>
                 <div class="h-align">
-                    <div id="group-4-btn" class="boton vermell">
+                    <div id="group-4-btn" class="boton rojo">
                         Rojo
                     </div>
-                    <div id="group-5-btn" class="boton verd">
+                    <div id="group-5-btn" class="boton verde">
                         Verde
                     </div>
-                    <div id="group-6-btn" class="boton blau">
+                    <div id="group-6-btn" class="boton azul">
                         Azul
                     </div>
                 </div>
@@ -76,6 +76,9 @@
                     </div>
                 </div>
             </div>
+            <div id="group-accept-btn" class="boton acierto">
+                Aceptar
+            </div>
         </div>
     </div>
 
@@ -85,9 +88,7 @@
         <div id="aciertos">0</div>
         <div id="segundos">20</div>
     </div>
-    <div id="pregunta">
-        CON LA A: Mecanismo para esparcir un líquido a presión, como el agua para el riego
-    </div>
+    <div id="pregunta"></div>
     <div id="respuesta-box">
         <div id="btn-ok" class="boton acierto">
             <i class="fa fa-check"></i>
