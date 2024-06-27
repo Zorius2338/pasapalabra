@@ -12,8 +12,10 @@ class Tiempo{
         return (this.#minutos)
     }
   restartiempo(){
-    this.#segundos--
-    if (this.#segundos == -1){
+    if(this.#minutos === 0 && this.#segundos === 0) return;
+    
+    this.#segundos--;
+    if (this.#segundos == -1 && this.minutos > 0) {
         this.#minutos--;
         this.#segundos = 59;
     }
