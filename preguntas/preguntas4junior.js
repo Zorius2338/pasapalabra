@@ -1,5 +1,5 @@
 const PREGUNTAS2 = {
-    "Comienza por A": "Si un barco quiere quedarse quieto en el mar, debe soltar su...",
+    "Comienza por A": "Cuando se aproxima la última hora de la tarde, decimos que está",
     "Comienza por B": "La capital de Colombia es...",
     "Comienza por C": "Así llamamos también a las golosinas. Son las...",
     "Comienza por D": "¿Es grave doctor?. Cuénteme cuál es su...",
