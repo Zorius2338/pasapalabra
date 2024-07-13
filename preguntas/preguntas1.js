@@ -1,3 +1,4 @@
+// PREGUNTAS1 en este caso es el identificador del set de preguntas
 const PREGUNTAS1 = {
     "A": ["Comienza por ", "La sirenita se llama como un detergente. Su nombre es..."],
     "B": ["Comienza por ", "Los barcos pueden ir a estribor o a..."],

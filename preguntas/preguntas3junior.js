@@ -20,7 +20,7 @@ const PREGUNTAS2 = {
     "Comienza por S": "Si quieres que tu ropa se seque más rápido, métela en la....",
     "Comienza por T": "Te tropiezas siempre. Eres un poco...",
     "Comienza por U": "Comprende todo el universo. Es...",
-    "Comienza por V": "Es el segundo planeta más próximo al sol. También es la diosa del amor en la mitologia griega. Es...,
+    "Comienza por V": "Es el segundo planeta más próximo al sol. También es la diosa del amor en la mitologia griega. Es...",
     "Contiene la X": "El pecho de las personas y de los animales también se llama...",
     "Comienza por Y": "En inglés, (amarillo) se dice...",
     "Comienza por Z": "Es como un lobo. Es muy astuto y le encanta entrar en los corrales de noche. Es un...",

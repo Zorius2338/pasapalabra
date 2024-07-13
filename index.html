@@ -4,6 +4,8 @@
 <head>
     <title>Pasapalabra</title>
     <script src="preguntas/preguntas1.js"></script>
+    <script src="preguntas/preguntas2junior.js"></script>
+    <!-- Como la linea de arriba se pueden cargar preguntas diferentes para los roscos -->
 
     <script src="Rosco.js"></script>
     <script src="Tiempo.js"></script>
@@ -13,7 +15,8 @@
 </head>
 
 <body>
-    <div id="tiempo-global">15:00</div>
+    <img id="logo-img" src="assets/PBlow.png"></img>
+    <div id="tiempo-global">00:00</div>
 
     <div id="next-group-modal" class="modal hidden">
         <div class="modal-window">
@@ -24,7 +27,19 @@
         </div>
     </div>
 
-    <div id="config-mode-modal" class="modal">
+    <div id="config-time-modal" class="modal">
+        <div class="modal-window">
+            <div id="config-modal-title">Elije el tiempo de juego global</div>
+            <div class="h-align">
+                <input id="cnfg-global-time" type="text">
+            </div>
+            <div id="config-time-btn" class="boton acierto">
+                Aceptar
+            </div>
+        </div>
+    </div>
+
+    <div id="config-mode-modal" class="modal hidden">
         <div class="modal-window">
             <div id="config-modal-title">Elije la modalidad</div>
             <div class="h-align">
