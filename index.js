@@ -107,13 +107,10 @@ function jugar() {
         ];
 
     for (let grupo of groups) {
-        console.log(grupo);
 
         // WIP: Hacer un do while mientras el set de preguntas esté en repetido, es decir ya se haya usado en un rosco anterior
         let setPreguntas = ~~(Math.random() * preguntas.length);
         repetido.push(setPreguntas);
-
-        console.log(setPreguntas);
 
         roscos.push(
             // Aqui se reparte aleatoriamente un set de preguntas distinto
