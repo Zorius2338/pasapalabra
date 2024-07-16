@@ -202,7 +202,7 @@ body {
     width: 3rem;
     height: 3rem;
 
-    background-color: #3366aa;
+    background-color: #3366aaaa;
 
     border-radius: 6rem;
 
@@ -210,15 +210,15 @@ body {
 }
 
 .acierto {
-    background-color: #3daa33 !important;
+    background-color: #3daa33aa !important;
 }
 
 .fallo {
-    background-color: #aa3333 !important;
+    background-color: #aa3333aa !important;
 }
 
 .pasapalabra {
-    background-color: #adaa08 !important;
+    background-color: #adaa08aa !important;
 }
 
 .current {

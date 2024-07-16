@@ -48,8 +48,14 @@ function loadEventListeners() {
         let currentRosco = roscos[current_rosco_i];
 
         currentRosco.acertarLetra(document);
-        currentRosco.siguienteLetra(document);
-        currentRosco.resetTiempo(document);
+
+        if(currentRosco.aciertos === Rosco.LETRAS.length){
+            document.getElementById("end-modal").classList.remove("hidden");
+            
+        } else {
+            currentRosco.siguienteLetra(document);
+            currentRosco.resetTiempo(document);
+        }
     })
 
     document.getElementById("btn-error").addEventListener("click", (e) => {
