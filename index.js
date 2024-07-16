@@ -82,11 +82,21 @@ function jugar() {
     let preguntas = (mode == "kids") ?
         // Preguntas niños    
         [
-            PREGUNTAS1,
-            PREGUNTAS2
+            PREGUNTAS1J,
+            PREGUNTAS2J,
+            PREGUNTAS3J,
+            PREGUNTAS4J,
+            PREGUNTAS5J,
+            PREGUNTAS6J,
         ] :
         // Preguntas adultos
         [
+            PREGUNTAS1,
+            PREGUNTAS2,
+            PREGUNTAS3,
+            PREGUNTAS4,
+            PREGUNTAS5,
+            PREGUNTAS6,
             
         ];
 
